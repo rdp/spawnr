@@ -1,0 +1,5 @@
+if RUBY_VERSION < '1.9.0'
+  puts "ping me if you want this made compat. with 1.8.x"
+end
+
+Process.spawn(ARGV.map{|arg| arg.gsub('"', "\\"")}.join(' '))
